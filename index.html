@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Technical task</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="/CSS/style.css">
+   <script defer src="Form.js"></script>
+</head>
+
+<body>
+   <div class="parent">
+      <div class="container">
+         <p class="title__text">Register a new user</p>
+         <input id="first__name" type="text" placeholder="First Name*">
+         <div class="wraper">
+            <p class="requirement" id="requirement__first__name"></p>
+         </div>
+         <input id="last__name" type="text" placeholder="Last Name*">
+         <div class="wraper">
+            <p class="requirement" id="requirement__last__name"></p>
+         </div>
+         <input id="login" type="text" placeholder="Login*">
+         <div class="wraper">
+            <p class="requirement" id="requirement__login"></p>
+         </div>
+         <input id="email" type="email" placeholder="Email*">
+         <div class="wraper">
+            <p class="requirement" id="requirement__email"></p>
+         </div>
+         <input id="company__name" type="text" placeholder="Company Name*">
+         <div class="wraper">
+            <p class="requirement" id="requirement__company__name"></p>
+         </div>
+         <input id="password" type="password" placeholder="Password*">
+         <div class="wraper">
+            <p class="requirement" id="requirement__password"></p>
+         </div>
+         <input id="confirm__password" type="password" placeholder="Confirm Password*">
+         <div class="wraper">
+            <p class="requirement" id="requirement__confirm__password"></p>
+         </div>
+         <button class="next__step">Next Step</button>
+      </div>
+
+      <div class="container2">
+         <p class="title__text__container2">Choose your specialization</p>
+         <div class="departments__wraper">
+            <select class="departments" name="Departments" required value="Departments">
+               <option>Departmens</option>
+               <option>Sales</option>
+               <option>Marketing</option>
+               <option>Technology</option>
+            </select>
+         </div>
+
+         <div class="vacancy__wraper">
+            <select class="vacancy" name="Vacancy" required value="Vacancy" disabled>
+               <option>Vacancy</option>
+            </select>
+         </div>
+         <button class="NEXT__STEP2">Next Step</button>
+      </div>
+
+      <div class="container3">
+         <p class="title__text__container3">Check your information:</p>
+         <p class="p__container3__text">Click send if everything correct. Click edit if you see error.</p>
+         <div class="wraper2">
+            <button class="Edit">Edit</button>
+            <button class="Send">Send</button>
+         </div>
+
+         <div class="wraper3">
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
