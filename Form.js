@@ -143,14 +143,88 @@ NEXT_STEP.onclick = () => {
       return;
    }
 
-   console.log(PASSWORD.value);
-   console.log(CONFIRM_PASSWORD.value);
 
    container.style.display = 'none';
    const container2 = document.querySelector('.container2');
    container2.style.display = 'flex';
 
    const NEXT__STEP2 = document.querySelector('.NEXT__STEP2');
+
+   const formManager = {
+      vacancyName: '',
+      departmentName: '',
+   };
+
+   const departments = {
+      "Sales": [
+         "Sales Manager",
+         "Account Manager"
+      ],
+      "Marketing": [
+         "Creative Manager",
+         "Marketing Coordinator",
+         "Content Writer"
+      ],
+      "Technology": [
+         "Project Manager",
+         "Software Developer",
+         "PHP programmer",
+         "Front End",
+         "Quality Assurance"
+      ]
+   };
+
+   function vacancyOnChangeHandler(option) {
+      const vacancyName = option.target.value;
+      if (vacancyName !== "Vacancy") {
+         formManager.vacancyName = vacancyName;
+      } else {
+         formManager.vacancyName = '';
+      }
+   }
+
+   function setVacancies(departmentName) {
+      const vacancyForm = document.querySelector('.vacancy-form');
+      vacancyForm.innerHTML = '<option value="" disabled selected >Vacancy</option>';
+      vacancyForm.onchange = vacancyOnChangeHandler;
+      const vacancies = departments[departmentName];
+    
+      for (let i in vacancies) {
+        const vacancyName = vacancies[i];
+        const option = document.createElement('option');
+        option.innerHTML = vacancyName;
+        vacancyForm.appendChild(option);
+      }
+    }
+
+    function departmentsOnChangeHandler(option) {
+      const vacancyForm = document.querySelector('.vacancy-form');
+      const departmentName = option.target.value;
+      if (departmentName !== "Departments") {
+        setVacancies(option.target.value);
+        vacancyForm.disabled = false;
+        formManager.departmentName = departmentName;
+      } else {
+        vacancyForm.innerHTML = '<option value="" disabled selected >Vacancy</option>';
+        vacancyForm.disabled = true;
+        formManager.departmentName = '';
+      }
+    }
+
+    function setDepartments() {
+      const departmentForm = document.querySelector('.department-form');
+    
+      departmentForm.onchange = departmentsOnChangeHandler;
+    
+      for (let departmentName in departments) {
+        const option = document.createElement('option');
+        option.innerHTML = departmentName;
+        departmentForm.appendChild(option);
+      }
+    }
+    setDepartments();
+
+
 
    NEXT__STEP2.onclick = () => {
       container2.style.display = 'none';

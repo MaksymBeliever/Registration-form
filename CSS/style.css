@@ -44,7 +44,7 @@ body {
    display: none;
 }
 
-.departments {
+.department-form {
    margin-bottom: 30px;
    height: 45px;
    width: 400px;
@@ -69,7 +69,7 @@ body {
    color: #b9c9cd;
 }
 
-.vacancy {
+.vacancy-form {
    height: 45px;
    width: 400px;
    background-color: #677a80;
