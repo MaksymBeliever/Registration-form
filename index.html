@@ -15,31 +15,31 @@
    <div class="parent">
       <div class="container">
          <p class="title__text">Register a new user</p>
-         <input id="first__name" type="text" placeholder="First Name*">
-         <div class="wraper">
+         <input id="first__name" type="text" name="user_first_name" placeholder="First Name*">
+         <div class="wraper" id="wraper_first_name">
             <p class="requirement" id="requirement__first__name"></p>
          </div>
-         <input id="last__name" type="text" placeholder="Last Name*">
-         <div class="wraper">
+         <input id="last__name" type="text" name="user_last_name" placeholder="Last Name*">
+         <div class="wraper" id="wraper_last_name">
             <p class="requirement" id="requirement__last__name"></p>
          </div>
-         <input id="login" type="text" placeholder="Login*">
+         <input id="login" type="text" name="user_login" placeholder="Login*">
          <div class="wraper">
             <p class="requirement" id="requirement__login"></p>
          </div>
-         <input id="email" type="email" placeholder="Email*">
+         <input id="email" type="email" name="user_email" placeholder="Email*">
          <div class="wraper">
             <p class="requirement" id="requirement__email"></p>
          </div>
-         <input id="company__name" type="text" placeholder="Company Name*">
+         <input id="company__name" type="text" name="user_company_name" placeholder="Company Name*">
          <div class="wraper">
             <p class="requirement" id="requirement__company__name"></p>
          </div>
-         <input id="password" type="password" placeholder="Password*">
-         <div class="wraper">
+         <input id="password" type="password" name="user_password" placeholder="Password*">
+         <div class="wraper" id="wraper_password">
             <p class="requirement" id="requirement__password"></p>
          </div>
-         <input id="confirm__password" type="password" placeholder="Confirm Password*">
+         <input id="confirm__password" type="password" name="user_password" placeholder="Confirm Password*">
          <div class="wraper">
             <p class="requirement" id="requirement__confirm__password"></p>
          </div>
@@ -50,7 +50,7 @@
          <p class="title__text__container2">Choose your specialization</p>
          <div class="departments__wraper">
             <select class="departments" name="Departments" required value="Departments">
-               <option>Departmens</option>
+               <option disabled selected>Departmens</option>
                <option>Sales</option>
                <option>Marketing</option>
                <option>Technology</option>
@@ -59,7 +59,7 @@
 
          <div class="vacancy__wraper">
             <select class="vacancy" name="Vacancy" required value="Vacancy" disabled>
-               <option>Vacancy</option>
+               <option disabled selected>Vacancy</option>
             </select>
          </div>
          <button class="NEXT__STEP2">Next Step</button>
